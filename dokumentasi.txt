@@ -1,0 +1,303 @@
+
+
+
+To git@github.com:acmadi/sp2d.git
+   6e284b3..b4ddaa0  master -> master
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git commit -am "update storage"
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+[master warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+64520c2] update storage
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+   b4ddaa0..64520c2  master -> master
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git add .
+
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/cache/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/sessions/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/views/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/logs/.gitignore.
+The file will have its original line endings in your working directory.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git commit -am "update storage"
+[master warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+885ec65] update storage
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/cache/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/sessions/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/framework/views/.gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in storage/logs/.gitignore.
+The file will have its original line endings in your working directory.
+ 6 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 storage/framework/.gitignore
+ create mode 100644 storage/framework/cache/.gitignore
+ create mode 100644 storage/framework/sessions/.gitignore
+ create mode 100644 storage/framework/views/.gitignore
+ create mode 100644 storage/logs/.gitignore
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git push origin master
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 687 bytes | 0 bytes/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+   64520c2..885ec65  master -> master
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git fetch
+Unpacking objects: 100% (3/3), done.
+emote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+From github.com:acmadi/sp2d
+   885ec65..250d305  master     -> origin/master
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git fetch
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git fetch origin
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git pull origin
+Updating 885ec65..250d305
+Fast-forward
+ user pas | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git pull origin
+Unpacking objects: 100% (3/3), done.
+emote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+From github.com:acmadi/sp2d
+   250d305..dcdf12a  master     -> origin/master
+Updating 250d305..dcdf12a
+Fast-forward
+ user pas | 1 +
+ 1 file changed, 1 insertion(+)
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git branch feature_multiFile
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (master)
+$ git checkout feature_multiFIle
+Switched to branch 'feature_multiFIle'
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFIle)
+$ git checkout feature_multiFile
+Switched to branch 'feature_multiFile'
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git branch -a
+* feature_multiFile
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ vi coba.php
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git add coba.php
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git commit -am "tambah file coba.php"
+[feature_multiFile d4c90a4] tambah file coba.php
+ 1 file changed, 6 insertions(+)
+ create mode 100644 coba.php
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --set-upstream feature_multiFIle
+fatal: 'feature_multiFIle' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --set-upstream feature_multiFile
+fatal: 'feature_multiFile' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push
+fatal: The current branch feature_multiFile has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature_multiFile
+
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$  git push --set-upstream origin feature_multiFile
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+ * [new branch]      feature_multiFile -> feature_multiFile
+Branch feature_multiFile set up to track remote branch feature_multiFile from origin.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git branch develop
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git branch staging
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git branch production
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --set-upstream origin develop
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+ * [new branch]      develop -> develop
+Branch develop set up to track remote branch develop from origin.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --set-upstream origin staging
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+ * [new branch]      staging -> staging
+Branch staging set up to track remote branch staging from origin.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --set-upstream origin production
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+ * [new branch]      production -> production
+Branch production set up to track remote branch production from origin.
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git log
+commit d4c90a44640d3b96006aeeb80c98eb83e0828581
+Author: acmadi <diahmad330@gmail.com>
+Date:   Sat Dec 12 16:27:03 2015 +0700
+
+    tambah file coba.php
+
+commit dcdf12a3fd1e7cfbadfa0c1eb470c9069e27410c
+Author: acmadi <diahmad330@gmail.com>
+Date:   Sat Dec 12 16:21:58 2015 +0700
+
+      Coba Fetch
+
+      //Coba Fetch
+
+commit 250d305ff2ad1efe09770ffd0d5f06713d9913d9
+Author: acmadi <diahmad330@gmail.com>
+Date:   Sat Dec 12 16:13:51 2015 +0700
+
+    coba fetch
+
+    fetch coba
+
+commit 885ec6514871592fcf6e337ef4cb37222f412f40
+Author: acmadi <diahmad330@gmail.com>
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git tag v1.0 d4c90a44640d
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$ git push --tags
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:acmadi/sp2d.git
+ * [new tag]         v1.0 -> v1.0
+
+idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
+$
