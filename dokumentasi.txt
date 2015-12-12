@@ -301,3 +301,588 @@ To git@github.com:acmadi/sp2d.git
 
 idea centre@PROGRAMMER /F/xampp 5.6.11/htdocs/sppd (feature_multiFile)
 $
+
+//=====================================================================================
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote git@github.com:acmadi/AppX.git
+error: Unknown subcommand: git@github.com:acmadi/AppX.git
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags|--no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete |<branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+$ git remote add -f "git@github.com:acmadi/AppX.git"
+usage: git remote add [<options>] <name> <url>associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch> set up remote as a mirror to push to or fetch from
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+$ git remote add -f git@github.com:acmadi/AppX.git
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f -m git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add AppX git@github.com:acmadi/AppX.git
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin :master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote
+AppX
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git branch -r
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git branch -a
+  Version2.0
+* master
+  newfeature
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git fetch AppX
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --help
+Launching default browser to display HTML ...
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --set-upstream origini master
+fatal: 'origini' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --set-upstream origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ cd ../
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-v79HfXCvRGy2/agent.4964; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=5740; export SSH_AGENT_PID;
+echo Agent pid 5740;
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ eval $(ssh-agent -s)
+Agent pid 5492
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/LENOVO/.ssh/id_rsa (/c/Users/LENOVO/.ssh/id_rsa)
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/LENOVO/.ssh/id_rsa (/c/Users/LENOVO/.ssh/id_rsa)
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ clip < ~/.ssh/id_rsa.pub
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh -T git@github.com
+
+Hi acmadi! You've successfully authenticated, but GitHub does not provide shell access.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ cd AppX
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$
+
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git fetch AppX
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --help
+Launching default browser to display HTML ...
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --set-upstream origini master
+fatal: 'origini' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push --set-upstream origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ cd ../
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-v79HfXCvRGy2/agent.4964; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=5740; export SSH_AGENT_PID;
+echo Agent pid 5740;
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ eval $(ssh-agent -s)
+Agent pid 5492
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/LENOVO/.ssh/id_rsa (/c/Users/LENOVO/.ssh/id_rsa)
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/LENOVO/.ssh/id_rsa (/c/Users/LENOVO/.ssh/id_rsa)
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ clip < ~/.ssh/id_rsa.pub
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ ssh -T git@github.com
+
+Hi acmadi! You've successfully authenticated, but GitHub does not provide shell access.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ cd AppX
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f git@github.com:acmadi/AppX.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f AppX git@github.com:acmadi/AppX.git
+fatal: remote AppX already exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git remote add -f origin git@github.com:acmadi/AppX.git
+Updating origin
+Warning: Permanently added the RSA host key for IP address '192.30.252.131' to the list of known hosts.
+remote: Counting objects: 13, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 13 (delta 6), reused 9 (delta 2), pack-reused 0
+Unpacking objects: 100% (13/13), done.
+From github.com:acmadi/AppX
+ * [new branch]      Version2.0 -> origin/Version2.0
+ * [new branch]      master     -> origin/master
+ * [new branch]      newfeature -> origin/newfeature
+ * [new tag]         v1.2       -> v1.2
+ * [new tag]         v2.0       -> v2.0
+ * [new tag]         v3.1       -> v3.1
+ * [new tag]         v1.0       -> v1.0
+ * [new tag]         v1.1       -> v1.1
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git pull origin master
+From github.com:acmadi/AppX
+ * branch            master     -> FETCH_HEAD
+Updating a116547..20fe705
+Fast-forward
+ coba.php  | 2 ++
+ readme.md | 2 ++
+ 2 files changed, 4 insertions(+)
+ create mode 100644 readme.md
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git tag
+v1.0
+v1.1
+v1.2
+v2.0
+v3.1
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ git branch -a
+  Version2.0
+* master
+  newfeature
+  remotes/origin/Version2.0
+  remotes/origin/master
+  remotes/origin/newfeature
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/AppX (master)
+$ cd ../
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ git clone git@github.com:acmadi/my_dok_git.git
+Cloning into 'my_dok_git'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+Checking connectivity... done.
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY
+$ cd my_dok_git
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/my_dok_git (master)
+$ ls
+dokumentasi.txt
+
+LENOVO@LAPTOP-PRIMA /e/XAMPP_5.6.11/vid/GIT_REPOSITORY/my_dok_git (master)
+$
+
