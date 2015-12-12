@@ -1,4 +1,588 @@
+// 1. git coba di laptop ===============================================================
 
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git remote
+origin
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git remote origin :newfeature
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags|--no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete |<branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ cat coba.php
+<php COba
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git merge newfeature
+Updating 4d30047..01af9d4
+Fast-forward
+ coba.php | 2 ++
+ 1 file changed, 2 insertions(+)
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git branch -a
+* master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ cat coba.php
+<php COba
+// add new feature
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git push
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+   4d30047..01af9d4  master -> master
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ ls
+AppX  coba.php
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git branch -a
+* master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git checkout newfeature
+Switched to branch 'newfeature'
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git push
+fatal: The current branch newfeature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin newfeature
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git push --setupstream origin newfeature
+error: unknown option `setupstream'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    --delete              delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git push --setupstream origin newfeature --all
+error: unknown option `setupstream'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    --delete              delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git push --set-upstream origin newfeature
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+ * [new branch]      newfeature -> newfeature
+Branch newfeature set up to track remote branch newfeature from origin.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (newfeature)
+$ git checkout -b featureB
+Switched to a new branch 'featureB'
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ cat coba.php
+<php COba
+// add new feature
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ vi coba.php
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git status
+On branch featureB
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   coba.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -m "add new feature B"
+On branch featureB
+Changes not staged for commit:
+        modified:   coba.php
+
+no changes added to commit
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git add coba.php
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -m "add new feature B"
+[featureB 3645c3a] add new feature B
+ 1 file changed, 2 insertions(+)
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push set-upstream featureB
+fatal: 'set-upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push
+fatal: The current branch featureB has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin featureB
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push set-upstream origin featureB
+fatal: 'set-upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push
+fatal: The current branch featureB has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin featureB
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push --set-upstream origin featureB
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 289 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+ * [new branch]      featureB -> featureB
+Branch featureB set up to track remote branch featureB from origin.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git checkout -b Version2.0
+Switched to a new branch 'Version2.0'
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ git push --set-upstream origin Version2.0
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+ * [new branch]      Version2.0 -> Version2.0
+Branch Version2.0 set up to track remote branch Version2.0 from origin.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$
+
+
+
+[featureB 3645c3a] add new feature B
+ 1 file changed, 2 insertions(+)
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push set-upstream featureB
+fatal: 'set-upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push
+fatal: The current branch featureB has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin featureB
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push set-upstream origin featureB
+fatal: 'set-upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push
+fatal: The current branch featureB has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin featureB
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git push --set-upstream origin featureB
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 289 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+ * [new branch]      featureB -> featureB
+Branch featureB set up to track remote branch featureB from origin.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git checkout -b Version2.0
+Switched to a new branch 'Version2.0'
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ git push --set-upstream origin Version2.0
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/acmadi/AppX.git
+ * [new branch]      Version2.0 -> Version2.0
+Branch Version2.0 set up to track remote branch Version2.0 from origin.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ git branch -a
+* Version2.0
+  featureB
+  master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Version2.0
+  remotes/origin/featureB
+  remotes/origin/master
+  remotes/origin/newfeature
+
+LENOVO@LAPTOP-PRIMA /d/AppX (Version2.0)
+$ git checkout featureB
+Switched to branch 'featureB'
+Your branch is up-to-date with 'origin/featureB'.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ cat featureb
+cat: featureb: No such file or directory
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ vi coba.php
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+//Add Update New Feature
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -a
+Aborting commit due to empty commit message.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -m
+error: switch `m' requires a value
+usage: git commit [options] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -m "update feature "
+On branch featureB
+Your branch is up-to-date with 'origin/featureB'.
+
+Changes not staged for commit:
+        modified:   coba.php
+
+no changes added to commit
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git status
+On branch featureB
+Your branch is up-to-date with 'origin/featureB'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   coba.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git status
+On branch featureB
+Your branch is up-to-date with 'origin/featureB'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   coba.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git branch -a
+  Version2.0
+* featureB
+  master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Version2.0
+  remotes/origin/featureB
+  remotes/origin/master
+  remotes/origin/newfeature
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        coba.php
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git commit -a
+[featureB 2370e80]      modified:   coba.php
+ 1 file changed, 2 insertions(+)
+
+LENOVO@LAPTOP-PRIMA /d/AppX (featureB)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git merge featureB
+Updating 01af9d4..2370e80
+Fast-forward
+ coba.php | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git branch -a
+  Version2.0
+  featureB
+* master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Version2.0
+  remotes/origin/featureB
+  remotes/origin/master
+  remotes/origin/newfeature
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ cat coba.php
+<php COba
+// add new feature
+
+//Add new feature B
+
+//Add Update New Feature
+
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git branch -D featureB
+Deleted branch featureB (was 2370e80).
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git branch -a
+  Version2.0
+* master
+  newfeature
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Version2.0
+  remotes/origin/featureB
+  remotes/origin/master
+  remotes/origin/newfeature
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$ git push --set-upstream origin :featureB
+Username for 'https://github.com': diahmad330@gmail.com
+Password for 'https://diahmad330@gmail.com@github.com':
+To https://github.com/acmadi/AppX.git
+ - [deleted]         featureB
+
+LENOVO@LAPTOP-PRIMA /d/AppX (master)
+$
+// 2. git coba dikantor ===============================================================
 
 
 To git@github.com:acmadi/sp2d.git
